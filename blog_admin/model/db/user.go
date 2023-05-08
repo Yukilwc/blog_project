@@ -16,7 +16,7 @@ type CustomModel struct {
 type User struct {
 	UserName string `json:"userName" gorm:"index;comment:用户登录名"`
 	Password string `json:"-"`
-	Email    string `json:"email" gorm:"index"`
+	Email    string `json:"email"`
 	NickName string `json:"nickName" gorm:"default:游客"`
 	Enable   int    `json:"enable" gorm:"default:1;comment:是否启用"`
 	CustomModel

@@ -27,7 +27,7 @@ func GetZapCores() []zapcore.Core {
 	if global.ENV == "development" {
 		fmt.Println("构造开发环境zap logger")
 		cores = append(cores, GetConsoleCore())
-		cores = append(cores, GetFileCores()...)
+		// cores = append(cores, GetFileCores()...)
 
 	} else if global.ENV == "production" {
 		fmt.Println("构造生产环境zap logger")
